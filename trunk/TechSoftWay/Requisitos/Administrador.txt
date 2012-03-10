@@ -1,0 +1,9 @@
+Admin:
+* Será responsavel por todos os cadastros do sistema.
+
+
+
+Cadastro de usuarios:
+String login;
+String password;
+String nome_user; 
