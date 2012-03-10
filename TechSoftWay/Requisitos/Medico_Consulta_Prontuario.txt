@@ -1,0 +1,5 @@
+* O médico também irá consultar seus prontuários antes de um atendimento, para relembrar como foi sua ultima consulta.
+
+Consulta de Prontuario
+
+- Será efetuada clicando no menu PRONTUARIO e em seguida na opção de consulta de prontuários.
