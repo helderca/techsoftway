@@ -30,7 +30,7 @@
                   <resource>/TechSoftWay/Requisitos/Secretaria_Agendar_Consulta.txt</resource>
                   <constraint>
                     <height>40</height>
-                    <width>100</width>
+                    <width>159</width>
                     <x>497</x>
                     <y>290</y>
                   </constraint>
@@ -78,9 +78,10 @@
                 <source class="net.java.amateras.uml.usecasediagram.model.UsecaseActorModel" reference="../../.."/>
                 <target class="net.java.amateras.uml.usecasediagram.model.UsecaseModel">
                   <name>Cadastrar pacientes</name>
+                  <resource>/TechSoftWay/Requisitos/CadastraPaciente.txt</resource>
                   <constraint>
                     <height>40</height>
-                    <width>126</width>
+                    <width>143</width>
                     <x>482</x>
                     <y>338</y>
                   </constraint>
@@ -170,6 +171,7 @@
                 <source class="net.java.amateras.uml.usecasediagram.model.UsecaseActorModel" reference="../../.."/>
                 <target class="net.java.amateras.uml.usecasediagram.model.UsecaseModel">
                   <name>Faz anotações</name>
+                  <resource>/TechSoftWay/Requisitos/Anotaçoes.txt</resource>
                   <constraint>
                     <height>59</height>
                     <width>136</width>
@@ -459,33 +461,6 @@
     <net.java.amateras.uml.usecasediagram.model.UsecaseModel reference="../net.java.amateras.uml.usecasediagram.model.UsecaseActorModel/sourceConnections/net.java.amateras.uml.usecasediagram.model.UsecaseGeneralizationModel/target/sourceConnections/net.java.amateras.uml.usecasediagram.model.UsecaseRelationModel[2]/target"/>
     <net.java.amateras.uml.usecasediagram.model.UsecaseModel reference="../net.java.amateras.uml.usecasediagram.model.UsecaseActorModel/sourceConnections/net.java.amateras.uml.usecasediagram.model.UsecaseGeneralizationModel/target/sourceConnections/net.java.amateras.uml.usecasediagram.model.UsecaseRelationModel[3]/target"/>
     <net.java.amateras.uml.usecasediagram.model.UsecaseModel reference="../net.java.amateras.uml.usecasediagram.model.UsecaseActorModel/sourceConnections/net.java.amateras.uml.usecasediagram.model.UsecaseGeneralizationModel/target/sourceConnections/net.java.amateras.uml.usecasediagram.model.UsecaseRelationModel[4]/target"/>
-    <net.java.amateras.uml.model.NoteModel>
-      <content>Falta fazer os 3 em verdes sem bloco de notas</content>
-      <old></old>
-      <constraint>
-        <height>67</height>
-        <width>165</width>
-        <x>180</x>
-        <y>402</y>
-      </constraint>
-      <sourceConnections/>
-      <targetConnections/>
-      <children/>
-      <filterProperty/>
-      <backgroundColor reference="../../net.java.amateras.uml.usecasediagram.model.UsecaseActorModel/sourceConnections/net.java.amateras.uml.usecasediagram.model.UsecaseGeneralizationModel/target/backgroundColor"/>
-      <foregroundColor reference="../../net.java.amateras.uml.usecasediagram.model.UsecaseActorModel/sourceConnections/net.java.amateras.uml.usecasediagram.model.UsecaseGeneralizationModel/target/sourceConnections/net.java.amateras.uml.usecasediagram.model.UsecaseRelationModel/target/foregroundColor"/>
-      <showIcon>true</showIcon>
-      <parent class="net.java.amateras.uml.usecasediagram.model.UsecaseRootModel" reference="../../.."/>
-      <listeners serialization="custom">
-        <java.beans.PropertyChangeSupport>
-          <default>
-            <propertyChangeSupportSerializedDataVersion>2</propertyChangeSupportSerializedDataVersion>
-            <source class="net.java.amateras.uml.model.NoteModel" reference="../../../.."/>
-          </default>
-          <null/>
-        </java.beans.PropertyChangeSupport>
-      </listeners>
-    </net.java.amateras.uml.model.NoteModel>
   </children>
   <filterProperty/>
   <backgroundColor reference="../children/net.java.amateras.uml.usecasediagram.model.UsecaseActorModel/sourceConnections/net.java.amateras.uml.usecasediagram.model.UsecaseGeneralizationModel/target/backgroundColor"/>
