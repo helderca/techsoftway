@@ -1,0 +1,7 @@
+- Será feito pela secretaria anotações de vários tipos, por exemplo, comprar algo para a clinica, anotar recados etc.
+
+
+- Anotações
+
+String resumoAnotacao;
+String descritivoAnotacao;

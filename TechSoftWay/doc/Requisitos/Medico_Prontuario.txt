@@ -1,0 +1,13 @@
+* O médico fará seus atendimentos normais durante seu dia de trabalho, também vai escrever o prontuário do paciente e em seguida ira encaminhar para o sistema
+enquanto não é contratado uma secretaria, e também o mesmo(a) pode consultar e imprimir os prontuários antigos para revisar na hora de atender um paciente.
+
+
+Prontuario:
+- Inserir Prontuario
+
+String nomePaciente;
+String descricaoProntuario;
+
+- Alterar Prontuario //Deverá abrir uma lista com o nome dos pacientes e seus prontuarios para ser clicados e abrir em seguida.
+
+- Remover Prontuario //Deverá abrir a lista com o nome dos pacientes e clicar selecionando e em seguida no botão de APAGAR ou então em algum X.
