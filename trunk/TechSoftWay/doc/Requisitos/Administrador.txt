@@ -1,0 +1,12 @@
+Admin:
+* É responsavel por alterações que solicitará de nivel alto. O dono do sistema terá esse acesso após ser solicitado aos desenvolvedores.
+* Isso não implica que outros usuarios comuns não tenha algumas permissões extras.
+
+
+
+Cadastro de usuarios:
+
+String login; //Login para entrar no sistema.
+String password; //Senha do usuario.
+String nomeUser; //Nome do usuario
+String funcaoUsuario;  //Por exemplo, se ele é gerente, chefe do setor, secretario etc.

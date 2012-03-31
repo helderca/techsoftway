@@ -1,0 +1,10 @@
+- A secretaria irá cadastrar os pacientes, coletando seus dados sendo ou não pessoalmente.
+
+
+- Cadastrar Pacientes
+
+String nomePaciente;
+String telefonePaciente;
+String cpf;
+String planoSaude;
+String enderecoPaciente; 
