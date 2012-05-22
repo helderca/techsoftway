@@ -1,0 +1,3 @@
+- Clicando no botão de pedir ajudar no sistema vai abrir uma janela de aviso informando
+o telefone, nome da equipe entre outras informações que ajudará o usuario a fazer o contato
+conosco para ser efetuada a correção de algum possivel erro ou tirar dúvidas.

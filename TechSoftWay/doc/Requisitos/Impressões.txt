@@ -1,4 +1,0 @@
-- As impressões no sistema deve ser feita tanto pelo medico como pela secretaria, nos modulos de anotações, agenda e prontuarios.
-
-
-// Tirar dúvidas com o professor sobre como iremos fazer este modulo.
