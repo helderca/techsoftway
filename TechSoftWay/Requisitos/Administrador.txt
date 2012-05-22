@@ -1,4 +1,4 @@
-Admin:
+Administrador do Sistema:
 * É responsavel por alterações que solicitará elevação de nivel alto. O dono do sistema terá esse acesso após ser solicitado aos desenvolvedores.
 * Isso não implica que outros usuarios comuns não tenha algumas permissões extras.
 
