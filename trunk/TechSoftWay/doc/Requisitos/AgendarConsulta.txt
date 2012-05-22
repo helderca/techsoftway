@@ -1,0 +1,8 @@
+Agendar Consulta
+
+
+int codConsulta;
+String nomePaciente;
+int idade;
+String horarioConsulta;
+String dataConsulta; 

@@ -4,7 +4,8 @@
 - Cadastrar Pacientes
 
 String nomePaciente;
+String enderecoPaciente;
 String telefonePaciente;
-String cpf;
+String cpf_rg; //Chave primaria.
 String planoSaude;
-String enderecoPaciente; 
+ 
