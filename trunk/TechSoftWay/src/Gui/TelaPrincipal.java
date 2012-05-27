@@ -79,6 +79,7 @@ public class TelaPrincipal extends JFrame {
 		menuCadastro.add(cadastroPacientes);
 		
 		JMenuItem alterarPaciente = new JMenuItem("Alterar Paciente");
+		alterarPaciente.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 12));
 		menuCadastro.add(alterarPaciente);
 		
 		JMenu menuProntuario = new JMenu("Prontuario");

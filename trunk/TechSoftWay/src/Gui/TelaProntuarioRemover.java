@@ -20,7 +20,6 @@ import java.awt.event.ActionEvent;
 public class TelaProntuarioRemover extends JInternalFrame {
 
 	private JPanel removerProntuario;
-	private JTextField txtPaciente;
 
 	/**
 	 * Launch the application.
@@ -59,12 +58,6 @@ public class TelaProntuarioRemover extends JInternalFrame {
 		nomePaciente.setBounds(38, 44, 86, 14);
 		removerProntuario.add(nomePaciente);
 		
-		txtPaciente = new JTextField();
-		txtPaciente.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
-		txtPaciente.setBounds(118, 41, 242, 20);
-		removerProntuario.add(txtPaciente);
-		txtPaciente.setColumns(10);
-		
 		JButton confirmaRemover = new JButton("Confirma");
 		confirmaRemover.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -89,9 +82,9 @@ public class TelaProntuarioRemover extends JInternalFrame {
 		cancelarRemover.setBounds(227, 154, 89, 23);
 		removerProntuario.add(cancelarRemover);
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.setBounds(118, 41, 270, 20);
-		removerProntuario.add(comboBox);
+		JComboBox localizaUsersBox = new JComboBox();
+		localizaUsersBox.setBounds(118, 41, 270, 20);
+		removerProntuario.add(localizaUsersBox);
 		
 		JLabel removeProntuario = new JLabel("Deseja realmente remover este prontu\u00E1rio?");
 		removeProntuario.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));

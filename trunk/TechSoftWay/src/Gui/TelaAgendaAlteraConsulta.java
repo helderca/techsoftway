@@ -17,7 +17,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class TelaAgendaAlteraConsulta extends JInternalFrame {
-	private JTextField txtPaciente;
 	private JTextField txtDataConsulta;
 	private JTextField txtHorario;
 
@@ -53,12 +52,6 @@ public class TelaAgendaAlteraConsulta extends JInternalFrame {
 		nomePaciente.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
 		nomePaciente.setBounds(38, 44, 86, 14);
 		getContentPane().add(nomePaciente);
-		
-		txtPaciente = new JTextField();
-		txtPaciente.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
-		txtPaciente.setBounds(117, 41, 242, 20);
-		getContentPane().add(txtPaciente);
-		txtPaciente.setColumns(10);
 		
 		JComboBox localizaUserBox = new JComboBox();
 		localizaUserBox.setBounds(117, 41, 271, 20);
@@ -96,16 +89,6 @@ public class TelaAgendaAlteraConsulta extends JInternalFrame {
 		observacoes.setBounds(38, 93, 69, 14);
 		getContentPane().add(observacoes);
 		
-		JButton confirmaAlteracao = new JButton("Alterar");
-		confirmaAlteracao.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
-		confirmaAlteracao.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-			JOptionPane.showMessageDialog(null, "Cuidado!");
-			}
-		});
-		confirmaAlteracao.setBounds(56, 228, 89, 23);
-		getContentPane().add(confirmaAlteracao);
-		
 		JButton cancelaAlteracao = new JButton("Cancelar");
 		cancelaAlteracao.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
 		cancelaAlteracao.addActionListener(new ActionListener() {
@@ -127,7 +110,7 @@ public class TelaAgendaAlteraConsulta extends JInternalFrame {
 			}
 		});
 		salvatrAlteracaoConsulta.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
-		salvatrAlteracaoConsulta.setBounds(167, 228, 89, 23);
+		salvatrAlteracaoConsulta.setBounds(116, 228, 89, 23);
 		getContentPane().add(salvatrAlteracaoConsulta);
 
 	}
