@@ -23,7 +23,6 @@ import java.awt.TextArea;
 public class TelaProntuarioAlterar extends JInternalFrame {
 
 	private JPanel alterarProntuario;
-	private JTextField txtPaciente;
 
 	/**
 	 * Launch the application.
@@ -61,12 +60,6 @@ public class TelaProntuarioAlterar extends JInternalFrame {
 		nomePaciente.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
 		nomePaciente.setBounds(38, 44, 86, 14);
 		alterarProntuario.add(nomePaciente);
-		
-		txtPaciente = new JTextField();
-		txtPaciente.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
-		txtPaciente.setBounds(118, 41, 242, 20);
-		alterarProntuario.add(txtPaciente);
-		txtPaciente.setColumns(10);
 		
 		JComboBox localizaUserBox = new JComboBox();
 		localizaUserBox.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));

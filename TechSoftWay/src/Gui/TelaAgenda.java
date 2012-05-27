@@ -17,7 +17,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
 public class TelaAgenda extends JInternalFrame {
-	private JTextField txtPaciente;
 	private JTextField txtDataConsulta;
 	private JTextField txtHorario;
 
@@ -52,12 +51,6 @@ public class TelaAgenda extends JInternalFrame {
 		nomePaciente.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
 		nomePaciente.setBounds(38, 44, 86, 14);
 		getContentPane().add(nomePaciente);
-		
-		txtPaciente = new JTextField();
-		txtPaciente.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
-		txtPaciente.setBounds(117, 41, 242, 20);
-		getContentPane().add(txtPaciente);
-		txtPaciente.setColumns(10);
 		
 		JComboBox localizaUserBox = new JComboBox();
 		localizaUserBox.setBounds(117, 41, 272, 20);
