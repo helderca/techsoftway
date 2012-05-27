@@ -22,7 +22,6 @@ public class TelaPacientes extends JInternalFrame {
 	private JTextField txtEndereco;
 	private JTextField txtTelefone;
 	private JTextField txtCpfRg;
-	private JTextField txtPlanoSaude;
 	private JTextField txtCodPaciente;
 
 	/**
@@ -112,17 +111,6 @@ public class TelaPacientes extends JInternalFrame {
 		txtCpfRg.setBounds(123, 159, 242, 20);
 		cadastroPaciente.add(txtCpfRg);
 		txtCpfRg.setColumns(10);
-		
-		JLabel planoSaude = new JLabel("Plano de Sa\u00FAde:");
-		planoSaude.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
-		planoSaude.setBounds(38, 193, 86, 14);
-		cadastroPaciente.add(planoSaude);
-		
-		txtPlanoSaude = new JTextField();
-		txtPlanoSaude.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
-		txtPlanoSaude.setBounds(123, 190, 242, 20);
-		cadastroPaciente.add(txtPlanoSaude);
-		txtPlanoSaude.setColumns(10);
 		
 		JButton inserirPaciente = new JButton("Inserir");
 		inserirPaciente.addActionListener(new ActionListener() {

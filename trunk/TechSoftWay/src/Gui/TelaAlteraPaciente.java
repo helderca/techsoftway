@@ -9,11 +9,16 @@ import javax.swing.JComboBox;
 import javax.swing.JLabel;
 import javax.swing.JButton;
 import javax.swing.JTextField;
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
 
 public class TelaAlteraPaciente extends JInternalFrame {
+	
 	private JTextField txtPaciente;
 	private JTextField txtIdade;
 	private JTextField txtEndereco;
+	private JTextField txtTelefone;
+	private JTextField textField;
 
 	/**
 	 * Launch the application.
@@ -35,6 +40,9 @@ public class TelaAlteraPaciente extends JInternalFrame {
 	 * Create the frame.
 	 */
 	public TelaAlteraPaciente() {
+		
+		final TelaAlteraPaciente estaTela = this;
+		
 		setTitle("SystemClin - Alterar Paciente");
 		getContentPane().setBackground(Color.LIGHT_GRAY);
 		getContentPane().setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
@@ -53,12 +61,22 @@ public class TelaAlteraPaciente extends JInternalFrame {
 		
 		JButton salvarPaciente = new JButton("Salvar");
 		salvarPaciente.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
-		salvarPaciente.setBounds(120, 228, 89, 23);
+		salvarPaciente.setBounds(115, 213, 89, 23);
 		getContentPane().add(salvarPaciente);
 		
 		JButton btnCancelar = new JButton("Cancelar");
+		btnCancelar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				estaTela.setVisible(false);
+			}
+		});
+		
+		setClosable(true);
+		setIconifiable(true);
+		
 		btnCancelar.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
-		btnCancelar.setBounds(255, 228, 89, 23);
+		btnCancelar.setBounds(256, 213, 89, 23);
 		getContentPane().add(btnCancelar);
 		
 		JLabel nomePaciente = new JLabel("Nome Paciente:");
@@ -74,18 +92,18 @@ public class TelaAlteraPaciente extends JInternalFrame {
 		
 		JLabel idadePaciente = new JLabel("Idade:");
 		idadePaciente.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
-		idadePaciente.setBounds(27, 66, 46, 14);
+		idadePaciente.setBounds(27, 69, 46, 14);
 		getContentPane().add(idadePaciente);
 		
 		txtIdade = new JTextField();
 		txtIdade.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
-		txtIdade.setBounds(115, 63, 86, 20);
+		txtIdade.setBounds(115, 66, 86, 20);
 		getContentPane().add(txtIdade);
 		txtIdade.setColumns(10);
 		
 		JLabel enderecoPaciente = new JLabel("Endere\u00E7o:");
 		enderecoPaciente.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
-		enderecoPaciente.setBounds(27, 91, 58, 14);
+		enderecoPaciente.setBounds(27, 97, 58, 14);
 		getContentPane().add(enderecoPaciente);
 		
 		txtEndereco = new JTextField();
@@ -93,6 +111,28 @@ public class TelaAlteraPaciente extends JInternalFrame {
 		txtEndereco.setBounds(115, 94, 271, 20);
 		getContentPane().add(txtEndereco);
 		txtEndereco.setColumns(10);
+		
+		JLabel telefonePaciente = new JLabel("Telefone:");
+		telefonePaciente.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
+		telefonePaciente.setBounds(27, 126, 46, 14);
+		getContentPane().add(telefonePaciente);
+		
+		txtTelefone = new JTextField();
+		txtTelefone.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
+		txtTelefone.setBounds(115, 123, 271, 20);
+		getContentPane().add(txtTelefone);
+		txtTelefone.setColumns(10);
+		
+		JLabel lblCpfrg = new JLabel("CPF/RG:");
+		lblCpfrg.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
+		lblCpfrg.setBounds(27, 157, 46, 14);
+		getContentPane().add(lblCpfrg);
+		
+		textField = new JTextField();
+		textField.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
+		textField.setBounds(115, 154, 271, 20);
+		getContentPane().add(textField);
+		textField.setColumns(10);
 
 	}
 }

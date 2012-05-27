@@ -42,6 +42,9 @@ public class TelaPrincipal extends JFrame {
 	 * Create the frame.
 	 */
 	public TelaPrincipal() {
+		
+		final TelaPrincipal tp = this;
+		
 		setBackground(Color.LIGHT_GRAY);
 		setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 12));
 		setTitle("SystemClin");
@@ -75,12 +78,46 @@ public class TelaPrincipal extends JFrame {
 				tPaciente.setVisible(true);
 			}
 		});
+		
+		
+		
 		cadastroPacientes.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 12));
 		menuCadastro.add(cadastroPacientes);
 		
+		//Cria e instancia a tela de alterar paciente.
+		final TelaAlteraPaciente tAlteraPaciente = new TelaAlteraPaciente();
+		tAlteraPaciente.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		tAlteraPaciente.setLocation(39,67);
+		desktopPane.add(tAlteraPaciente);
+		tAlteraPaciente.setVisible(false);
+		
 		JMenuItem alterarPaciente = new JMenuItem("Alterar Paciente");
+		alterarPaciente.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+			
+				tAlteraPaciente.setVisible(true);
+			
+			}
+		});
 		alterarPaciente.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 12));
 		menuCadastro.add(alterarPaciente);
+		
+		//cria e instancia a tela de remover paciente
+		final TelaRemoverPaciente tRemoverPaciente = new TelaRemoverPaciente();
+		tRemoverPaciente.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+		tRemoverPaciente.setLocation(40,40);
+		desktopPane.add(tRemoverPaciente);
+		tRemoverPaciente.setVisible(false);
+		
+		JMenuItem mntmRemoverPaciente = new JMenuItem("Remover Paciente");
+		mntmRemoverPaciente.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent arg0) {
+				
+				tRemoverPaciente.setVisible(true);
+			}
+		});
+		mntmRemoverPaciente.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 12));
+		menuCadastro.add(mntmRemoverPaciente);
 		
 		JMenu menuProntuario = new JMenu("Prontuario");
 		menuProntuario.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 12));
