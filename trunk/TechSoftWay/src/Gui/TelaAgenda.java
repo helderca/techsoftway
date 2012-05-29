@@ -13,6 +13,9 @@ import javax.swing.JList;
 import javax.swing.JScrollBar;
 import java.awt.TextArea;
 import javax.swing.JButton;
+
+import TesteFachada.testefachada;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -80,6 +83,10 @@ public class TelaAgenda extends JInternalFrame {
 		JButton confirmaConsulta = new JButton("Confirmar");
 		confirmaConsulta.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
+				testefachada f = new testefachada();
+				
+				f.salvaAgenda(confirmaConsulta);
+				
 			JOptionPane.showMessageDialog(null, "Consulta marcada com sucesso!");
 			}
 			

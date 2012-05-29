@@ -1,30 +1,34 @@
 package TesteFachada;
 
-import contatoDAO.contatoDAO;
+import javax.swing.JButton;
+
+import RepositorioAgenda.repositorioAgenda;
+
 import controladorAgenda.controladoagenda;
 
 public class testefachada {
 
-	private contatoDAO ct = new contatoDAO();
+	
 	private controladoagenda contagenda; 
 	private static testefachada instacia;
 	
 	
 	private void iniciarcadastro ( ){
 	
-		contatoDAO dao = new contatoDAO();
-		contagenda = new controladoagenda(dao);
+		repositorioAgenda rpagenda = new repositorioAgenda();
+		contagenda = new controladoagenda(rpagenda);
+		
 
 		
 		
 	}
 	
 	private testefachada(){
-		
+		iniciarcadastro();
 		
 	}
 	
-	public void salvaAgenda (){
+	public void salvaAgenda (JButton confirmaConsulta){
 		
 		
 	}
