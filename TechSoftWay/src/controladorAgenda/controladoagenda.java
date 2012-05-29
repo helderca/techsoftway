@@ -1,20 +1,23 @@
 package controladorAgenda;
 
-import contatoDAO.contatoDAO;
+import RepositorioAgenda.repositorioAgenda;
+
 
 public class controladoagenda {
 
-	private contatoDAO dao;
+	private repositorioAgenda rep;
 	
 	
-	public controladoagenda(contatoDAO ) {
+	public controladoagenda( ) {
 
-		dao = 
+		
 		
 		
 	}
 
 	public void salvarAgenda() {
+		
+		
 
 	}
 
