@@ -81,16 +81,6 @@ public class TelaAgenda extends JInternalFrame {
 		getContentPane().add(txtAreaObs);
 		
 		JButton confirmaConsulta = new JButton("Confirmar");
-		confirmaConsulta.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				testefachada f = new testefachada();
-				
-				f.salvaAgenda(confirmaConsulta);
-				
-			JOptionPane.showMessageDialog(null, "Consulta marcada com sucesso!");
-			}
-			
-		});
 		confirmaConsulta.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 11));
 		confirmaConsulta.setBounds(117, 222, 89, 23);
 		getContentPane().add(confirmaConsulta);
