@@ -2,6 +2,8 @@ package Gui;
 
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
+import java.awt.Toolkit;
+
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JOptionPane;
@@ -17,6 +19,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JDesktopPane;
 import java.awt.SystemColor;
 import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 
 public class TelaPrincipal extends JFrame {
 
@@ -49,9 +52,11 @@ public class TelaPrincipal extends JFrame {
 		setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 12));
 		setTitle("SystemClin");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 772, 500);
+		setBounds(0, 0, Toolkit.getDefaultToolkit().getScreenSize().width, Toolkit.getDefaultToolkit().getScreenSize().height-20);
 		
 		setExtendedState(JFrame.MAXIMIZED_BOTH);
+		setResizable(false);
+
 		
 		final JDesktopPane desktopPane = new JDesktopPane();
 		
@@ -87,7 +92,7 @@ public class TelaPrincipal extends JFrame {
 		//Cria e instancia a tela de alterar paciente.
 		final TelaAlteraPaciente tAlteraPaciente = new TelaAlteraPaciente();
 		tAlteraPaciente.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		tAlteraPaciente.setLocation(39,67);
+		tAlteraPaciente.setLocation(38,67);
 		desktopPane.add(tAlteraPaciente);
 		tAlteraPaciente.setVisible(false);
 		
@@ -105,7 +110,7 @@ public class TelaPrincipal extends JFrame {
 		//cria e instancia a tela de remover paciente
 		final TelaRemoverPaciente tRemoverPaciente = new TelaRemoverPaciente();
 		tRemoverPaciente.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		tRemoverPaciente.setLocation(40,40);
+		tRemoverPaciente.setLocation(38,40);
 		desktopPane.add(tRemoverPaciente);
 		tRemoverPaciente.setVisible(false);
 		
@@ -180,7 +185,7 @@ public class TelaPrincipal extends JFrame {
 		
 		final TelaAgenda tAgenda = new TelaAgenda();
 		tAgenda.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		tAgenda.setLocation(39,65);
+		tAgenda.setLocation(38,65);
 		desktopPane.add(tAgenda);
 		
 		JMenuItem marcarConsulta = new JMenuItem("Marcar Consulta");
@@ -196,7 +201,7 @@ public class TelaPrincipal extends JFrame {
 		//Cria e instancia tela agenda altera consulta
 		final TelaAgendaAlteraConsulta tAgendaAlteraConsulta = new TelaAgendaAlteraConsulta();
 		tAgendaAlteraConsulta.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		tAgendaAlteraConsulta.setLocation(40,65);
+		tAgendaAlteraConsulta.setLocation(38,65);
 		desktopPane.add(tAgendaAlteraConsulta);
 		
 		JMenuItem alterarConsulta = new JMenuItem("Alterar Consulta");
@@ -212,7 +217,7 @@ public class TelaPrincipal extends JFrame {
 		//Cria e instancia tela de remover/cancelar consulta
 		final TelaAgendaRemoverConsulta tRemoveConsulta = new TelaAgendaRemoverConsulta();
 		tRemoveConsulta.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		tRemoveConsulta.setLocation(41, 65);
+		tRemoveConsulta.setLocation(38, 65);
 		desktopPane.add(tRemoveConsulta);
 		
 		JMenuItem RemoverConsulta = new JMenuItem("Remover Consulta");
@@ -233,7 +238,7 @@ public class TelaPrincipal extends JFrame {
 		//Cria e instancia tela de relatorios
 		final TelaRelatorios tRelatorios = new TelaRelatorios();
 		tRelatorios.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
-		tRelatorios.setLocation(42,65);
+		tRelatorios.setLocation(38,65);
 		desktopPane.add(tRelatorios);
 		
 		JMenuItem selecioneRelatrio = new JMenuItem("Selecionar Relat\u00F3rio");
@@ -246,9 +251,25 @@ public class TelaPrincipal extends JFrame {
 		selecioneRelatrio.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 12));
 		menuRelatorios.add(selecioneRelatrio);
 		
-		JMenu menuSair = new JMenu("Sair");
+		JMenu menuSair = new JMenu("Outras Op\u00E7\u00F5es");
 		menuSair.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 12));
 		menuBar.add(menuSair);
+		
+		JMenuItem sairSistema = new JMenuItem("Sair");
+		sairSistema.addActionListener(new ActionListener() {
+			int sair;
+			
+			public void actionPerformed(ActionEvent arg0) {
+				
+				int opcao = JOptionPane.showConfirmDialog(null, "Deseja Realmente sair?");
+				if(opcao == JOptionPane.YES_OPTION){
+					JOptionPane.showMessageDialog(null, "Obrigado por usar o SystemClin!");
+					dispose();
+				}			
+			}
+		});
+		sairSistema.setFont(new Font("Microsoft Sans Serif", Font.PLAIN, 12));
+		menuSair.add(sairSistema);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.LIGHT_GRAY);
 		contentPane.setToolTipText("");
@@ -259,5 +280,10 @@ public class TelaPrincipal extends JFrame {
 		
 		desktopPane.setBackground(Color.LIGHT_GRAY);
 		contentPane.add(desktopPane, BorderLayout.CENTER);
+		
+		JLabel imgWallpaper = new JLabel("");
+		imgWallpaper.setIcon(new ImageIcon("C:\\Users\\HelderCA\\Desktop\\wallpaper_fisioterapia23.png"));
+		imgWallpaper.setBounds(0, 0, 1390, 683);
+		desktopPane.add(imgWallpaper);
 	}
 }
